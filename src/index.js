@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PocketManager from './components/pocket-manager/PocketManager';
+import {createStore} from "redux";
 import * as serviceWorker from './serviceWorker';
+import { Provider } from "react-redux";
 
-ReactDOM.render(<PocketManager />, document.getElementById('root'));
+import reducers from "./reducers";
+import PocketManager from './components/pocket-manager/PocketManager';
+
+const store = createStore(reducers);
+
+ReactDOM.render(
+	<Provider store={store}>
+		<PocketManager />
+	</Provider>,
+	document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
