@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "setupFiles": [
+    "./test/setupTests.js"
+  ],
+  "testRegex": "(/test/.*|(\\\\.|/)(test|spec))\\\\.[jt]sx?$"
+}

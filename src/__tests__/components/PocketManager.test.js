@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PocketManager from '../../src/components/pocket-manager/PocketManager';
+import PocketManager from '../../components/pocket-manager/PocketManager';
 
 describe('PocketManager', function () {
   it('should render PocketManager App', () => {

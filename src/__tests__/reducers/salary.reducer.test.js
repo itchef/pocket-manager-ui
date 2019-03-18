@@ -1,4 +1,4 @@
-import { salaryReducer } from "../salary.reducer";
+import { salaryReducer } from "../../reducers/salary.reducer";
 
 describe('Salary Reducer', function () {
 	it('should provide unchanged state for default action', function () {
