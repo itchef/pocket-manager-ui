@@ -1,3 +1,3 @@
-export const salaryReducer = (state = {}, action) => {
-	return state;
-};
+const salaryReducer = (state = {}) => state;
+
+export default salaryReducer;
