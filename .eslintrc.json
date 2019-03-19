@@ -28,7 +28,9 @@
         "indent": ["warn", 2],
         "react/jsx-no-duplicate-props": ["error", { "ignoreCase": true }],
         "react/jsx-filename-extension": [ 1, { "extensions": [".js", ".jsx"] } ],
+        "react/prefer-stateless-function": [ "off" ],
         "beforeSelfClosing": "always",
+        "no-duplicate-imports": "warn",
         "jasmine/no-focused-tests": 0,
         "jasmine/no-global-setup": 0,
         "jasmine/expect-matcher": 1

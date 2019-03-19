@@ -1,6 +1,10 @@
 import React from "react";
 import { createMount, createShallow } from "@material-ui/core/test-utils";
-import { Header } from "../../components/header/Header";
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import Header from "../../components/header/Header";
+
+configure({ adapter: new Adapter() });
 
 describe("HeaderComponent", () => {
   let mount;
