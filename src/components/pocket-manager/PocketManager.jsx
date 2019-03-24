@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Header from "../header/Header";
+import HeaderTab from "../../containers/tab/HeaderTab.container";
 
 class PocketManager extends Component {
   render() {
     return (
-        <Header/>
+      <div>
+        <Header />
+        <HeaderTab />
+      </div>
     );
   }
 }

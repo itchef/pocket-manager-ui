@@ -2,6 +2,7 @@ import React from "react";
 import { createMount, createShallow } from "@material-ui/core/test-utils";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import { AppBar } from "@material-ui/core";
 import Header from "../../components/header/Header";
 
 configure({ adapter: new Adapter() });
@@ -20,9 +21,9 @@ describe("HeaderComponent", () => {
   });
 
   it("should render successfully", () => {
-    const wrapper = mount(<Header />);
+    const wrapper = shallow(<Header />);
 
-    expect(wrapper.find("AppBar").props().position).toEqual("fixed");
+    expect(wrapper.find(AppBar).props().position).toEqual("fixed");
   });
 
   it("should have menu icon", () => {

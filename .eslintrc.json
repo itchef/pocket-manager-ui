@@ -8,17 +8,13 @@
         "airbnb",
         "plugin:jasmine/recommended"
     ],
-    "globals": {
-        "Atomics": true,
-        "SharedArrayBuffer": true
-    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 2016,
-        "sourceType": "module"
+        "ecmaVersion": 2015
     },
+    "parser": "babel-eslint",
     "plugins": [
         "react",
         "jasmine"
@@ -26,13 +22,7 @@
     "rules": {
         "quotes": ["error", "double"],
         "indent": ["warn", 2],
-        "react/jsx-no-duplicate-props": ["error", { "ignoreCase": true }],
         "react/jsx-filename-extension": [ 1, { "extensions": [".js", ".jsx"] } ],
-        "react/prefer-stateless-function": [ "off" ],
-        "beforeSelfClosing": "always",
-        "no-duplicate-imports": "warn",
-        "jasmine/no-focused-tests": 0,
-        "jasmine/no-global-setup": 0,
-        "jasmine/expect-matcher": 1
+        "react/prefer-stateless-function": "off"
     }
 }
