@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Dashboard.scss";
 import PropTypes from "prop-types";
 import TableContainer from "../table-container/TableContainer";
+import PMButton from "../pm-button/PMButton";
 
 export default class Dashboard extends Component {
   componentDidMount() {
@@ -14,6 +15,7 @@ export default class Dashboard extends Component {
     return (
       <div className="dashboard-wrapper">
         <TableContainer reports={reports} />
+        <PMButton color="secondary" message="Add expenses" customStyle="add-new-button" />
       </div>
     );
   }
