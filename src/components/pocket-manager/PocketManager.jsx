@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import Header from "../header/Header";
-import HeaderTab from "../../containers/tab/HeaderTab.container";
+import HeaderTab from "../../containers/HeaderTab.container";
+import Dashboard from "../dashboard/Dashboard";
+import "./PocketManager.scss";
 
 class PocketManager extends Component {
   render() {
     return (
       <div>
         <Header />
-        <HeaderTab />
+        <div className="content-wrapper">
+          <HeaderTab />
+          <Dashboard />
+        </div>
       </div>
     );
   }

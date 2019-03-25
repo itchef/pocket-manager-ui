@@ -27,6 +27,7 @@ describe("PocketManager", () => {
       </Provider>,
       div,
     );
+
     expect(packageManager.find(Header)).toBeTruthy();
   });
 });

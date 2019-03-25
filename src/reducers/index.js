@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import salaryReducer from "./salary.reducer";
-import headerDetails from "./header.reducer";
+import headerReducer from "./header.reducer";
 
 export default combineReducers({
-  salaryReducer,
-  headerDetails,
+  salary: salaryReducer,
+  headerDetails: headerReducer,
 });
