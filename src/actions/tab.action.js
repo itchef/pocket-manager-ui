@@ -1,6 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-
-import {FETCH_EXPENSES, SELECT_TAB} from "./actionTypes";
+import { FETCH_EXPENSES, SELECT_TAB } from "./actionTypes";
 
 export const fetchExpenseDetails = nextTab => ({
   type: SELECT_TAB,

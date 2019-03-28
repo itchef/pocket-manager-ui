@@ -3,6 +3,8 @@ import "./Dashboard.scss";
 import PropTypes from "prop-types";
 import TableContainer from "../table-container/TableContainer";
 import PMButton from "../pm-button/PMButton";
+import { ADD_TRANSACTION_MODAL } from "../../constants/modal";
+import TransactionForm from "../../containers/TransactionForm.container";
 
 export default class Dashboard extends Component {
   componentDidMount() {
@@ -10,12 +12,18 @@ export default class Dashboard extends Component {
 	  fetchReports(tabName);
   }
 
+  newClickHandler = () => {
+    const { openNewTransactionModel } = this.props;
+    openNewTransactionModel(ADD_TRANSACTION_MODAL);
+  };
+
   render() {
   	const { reports } = this.props;
     return (
       <div className="dashboard-wrapper">
         <TableContainer reports={reports} />
-        <PMButton color="secondary" message="Add expenses" customStyle="add-new-button" />
+        <TransactionForm />
+        <PMButton color="secondary" message="Add expenses" customStyle="add-new-button" click={this.newClickHandler} />
       </div>
     );
   }
@@ -28,10 +36,12 @@ Dashboard.propTypes = {
   })),
   tabName: PropTypes.string,
   fetchReports: PropTypes.func,
+  openNewTransactionModel: PropTypes.func,
 };
 
 Dashboard.defaultProps = {
   reports: [],
   tabName: "",
   fetchReports: () => null,
+  openNewTransactionModel: () => null,
 };
