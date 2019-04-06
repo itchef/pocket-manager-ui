@@ -26,10 +26,9 @@
         "jasmine"
     ],
     "rules": {
-        "indent": ["warn", 4],
+        "indent": ["error", 2],
         "react/jsx-filename-extension": [ 1, { "extensions": [".js", ".jsx"] } ],
-        "react/prefer-stateless-function": "off",
-        "import/no-extranous-dependencies": [ "error", { "devDependencies": [ "**/setupTests.js", "**/*.test.js" ] } ],
+        "import/no-extraneous-dependencies": "off",
         "import/destructuring-assignment": [ "enabled", "always", { "ignoreClassFields":  false } ]
     }
 }
