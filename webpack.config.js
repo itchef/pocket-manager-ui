@@ -46,6 +46,14 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
